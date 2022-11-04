@@ -1,1 +1,24 @@
-<p>movie-detail works!</p>
+<div class="row">
+    <div class="col-auto">
+        <div class = "movie-poster">
+            <img src = {{image}} alt = "movie poster">
+        </div>
+    </div>
+    
+    <div class="movie-detail">
+        <h2>{{movie.Title}}</h2>
+        <br>
+        <p><b>Año: </b>{{movie.Year}}</p>
+        <p><b>Idiomas: </b>{{movieSelected? movieSelected.Language : '-'}}</p>
+        <p><b>Duración: </b>{{movieSelected? movieSelected.Runtime : '-'}}</p>
+        <p><b>Director: </b>{{movieSelected? movieSelected.Director : '-'}}</p>
+        <p><b>Género: </b>{{movieSelected? movieSelected.Genre : '-'}}</p>
+    </div>
+</div>
+<div class="row">
+    <br>
+    <h3>Descripción:</h3>
+    <p>{{movieSelected? movieSelected.Plot : 'Sin descripción'}}</p>
+</div>
+
+

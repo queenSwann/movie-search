@@ -1,18 +1,27 @@
-export interface IMovie {
-    imdbID: string;
+export interface IMovie {    
     Title: string;
     Year: string;
-    Language: string;
+    Rated: string;
+    Released: string;
     Runtime: string;
-    Director: string;
-    Plot: string;
     Genre: string;
+    Director: string;
+    Writer: string;
+    Actors: string;
+    Plot: string;
+    Language: string;
+    Country: string;
+    Awards: string;
     Poster: string;
-    imdbRating: string
-
-}
-
-export interface IMovieOption {
+    Ratings: any;
+    Metascore: string;
+    imdbRating: string;
+    imdbVotes: string;
     imdbID: string;
-    Title: string;
+    Type: string;
+    DVD: string;
+    BoxOffice: string;
+    Production: string;
+    Website: string;
+    Response: string;
 }

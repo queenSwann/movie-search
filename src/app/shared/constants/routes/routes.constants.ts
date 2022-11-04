@@ -5,9 +5,5 @@ export const ROUTES = {
   MOVIE: {
       path: 'movies',
       fullpath: '/movies',
-      DETAIL: {
-        path: 'detail',
-        fullpath: '/movies/detail',
-    },
   },
 }

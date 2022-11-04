@@ -1,52 +1,136 @@
 @import 'variables.scss';
 
-ng2-smart-table {
-    .smart-table {
-        thead {
-            background-color: $table-header-color;
-            border-bottom: 2px solid $table-split-color;
-            border-top: 1px solid $table-split-color;
-            .ng2-smart-titles {
-                text-transform: uppercase;
-            }
-            .ng2-smart-sort,
-            .ng2-smart-title,
-            .ng2-smart-sort-link {
-                color: $grey;
-            }
-            .ng2-smart-action {
-                color: $custom-blue;
-            }
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        tbody {
-            a {
-                color: $custom-blue;
-            }
-            tr:nth-child(even) {
-                background-color: $background-color;
-            }
-            .ng2-smart-row {
-                border-bottom: 1px solid $table-split-color;
-                &.selected {
-                    background-color: $table-split-color;
-                }
-            }
-        }
+html {
+    min-height: 100%;
+    position: relative;
+  }
+
+body {
+    background-color: $background-color;
+}
+
+h1, h2{
+    font-family: Arial, sans-serif;
+    color: $text-color;
+    margin-bottom: 0;
+}
+
+h3{
+    font-family: Arial, sans-serif;
+    color: $text-color;
+    font-size: larger;
+    margin-bottom: 0;
+}
+
+p{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    color: $text-color;
+    &.author {
+        font-size: small;
+        position: absolute;
+        bottom: auto;
+        margin-left: 2rem;
     }
 
-    ng2-smart-table-pager {
-        min-height: 65px;
-        .ng2-smart-pagination {
-            padding: 1rem;
-            margin-bottom: 0;
-            .page-link {
-                height: 100%;
-            }
-            .page-item.active .page-link {
-                background-color: $custom-blue;
-                border-color: $custom-blue;
-            }
-        }
+    &.error {        
+        margin-left: 1rem;
     }
 }
+
+.movie-detail{
+    position: absolute;
+    margin-top: -18rem;
+    margin-left: 15rem;
+}
+
+.movie-poster img{
+    max-width: 300px;
+    margin: 0 0;
+    border: 4px solid #fff;
+    width: 215px;
+    height: 300px;
+}
+
+.my-button {
+    cursor: pointer;
+    border-radius: $radius;
+    background-color: $orange;
+    color: white;
+    font-weight: bold;
+    padding: 0.3rem 2rem;
+    text-align: center;
+    border: none;
+    &:hover {
+        opacity: 0.6;
+    }
+    &.block {
+        float: right;
+        margin-top: -1.5rem;
+    }
+
+    &.clear {
+        margin-left: 2rem;
+    }
+
+    &.options {
+        position: absolute;
+        bottom: auto;
+        &__prev {
+            margin-left: 2rem;
+        }
+        &__next {
+            margin-left: 1rem;
+        }
+    }
+
+
+}
+
+.my-box {
+    position: static;
+    background-color: grey;
+    border-radius: 5px;
+    background-color: grey;
+    box-shadow: 10px 10px 50px $shadow-color;
+    &.wpadding {
+        padding: 1rem;
+        margin: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;        
+        position: relative;
+    }
+    &.detail {
+        background-color: $background-color;
+    }
+}
+
+.my-tag {
+    cursor: pointer;
+    font-size: 0.85rem;
+    border-radius: 10rem;
+    padding: 0.2rem 1rem;
+    margin-right: 1rem;
+    font-weight: normal;
+    &:hover {
+        color: inherit;
+        opacity: 0.8;
+    }
+}
+
+.my-container {
+    padding: 0 $box-padding $box-padding $box-padding;
+    &__title {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+}
+

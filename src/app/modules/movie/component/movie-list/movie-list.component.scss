@@ -1,0 +1,47 @@
+@import 'src/variables.scss';
+
+:host::ng-deep {
+    display: block;
+
+    .custom-movie {
+        &__image-container {
+            width: 8.5rem;
+            height: 8.5rem;
+            border-radius: 10px;
+            background-color: $background-color;
+            border: 1px solid #ced4da;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.5rem;
+            &__image {
+                width: 50%;
+                opacity: 0.8;
+            }
+        }
+
+        &__check {
+            margin-top: 1rem;
+            &__text {
+                margin-left: 0.25rem;
+            }
+        }
+
+        &__configuration {
+            margin-top: 1rem;
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        &__actions {
+            margin: 1rem 0;
+            text-align: right;
+        }
+
+        &__daysConfiguration {
+            text-align: center;
+        }
+    }
+}
+

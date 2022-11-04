@@ -1,1 +1,57 @@
-<p>movie-list works!</p>
+<div class="my-box wpadding">
+    <div class="row">
+        <h1 class="my-container__title">
+            {{ 'Buscador de películas' }}
+        </h1>                
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <input
+                class="my-tag"
+                placeholder="Nombre película"
+                type="search"
+                id="title"
+                (change)="setTitle($event.target)"
+                name="title"/>
+                <button class="my-button"
+                        (click)="loadData()">
+                        Buscar
+                </button>
+                <button class="my-button clear"
+                        (click)="clear()">
+                        Borrar selección
+                </button>
+        </div>    
+        
+        <div *ngIf="error">
+            <p class="error">No se han encontrado coincidencias</p>
+        </div>    
+    </div>
+</div>
+
+<div *ngFor="let movie of movies; index as i">
+    <div class="my-box wpadding">
+        <p class="col-2">{{movie.Title}}</p>        
+        <button class="my-button block"
+            (click)="viewMovie(movie, i)">
+            {{hidden[i]? 'Consultar' : 'Ocultar'}}
+        </button>
+
+        <div class="my-box wpadding detail"
+            *ngIf="!hidden[i]">
+            <app-movie-detail [movie]="movie"></app-movie-detail>
+        </div>
+    </div>
+</div>
+
+<button class="my-button options__prev"
+    id="prevButton"
+    (click)="prev()">
+    Anterior
+</button>
+<button class="my-button options__next"
+    id="nextButton"
+    (click)="next()">
+    Siguiente
+</button>
