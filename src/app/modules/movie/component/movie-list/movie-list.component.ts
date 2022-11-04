@@ -74,6 +74,7 @@ export class MovieListComponent implements OnInit {
 
   public setTitle(title: any){
     this.title = title.value;
+    this.clear();
   }
 
   public clear(){
