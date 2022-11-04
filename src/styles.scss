@@ -1,0 +1,52 @@
+@import 'variables.scss';
+
+ng2-smart-table {
+    .smart-table {
+        thead {
+            background-color: $table-header-color;
+            border-bottom: 2px solid $table-split-color;
+            border-top: 1px solid $table-split-color;
+            .ng2-smart-titles {
+                text-transform: uppercase;
+            }
+            .ng2-smart-sort,
+            .ng2-smart-title,
+            .ng2-smart-sort-link {
+                color: $grey;
+            }
+            .ng2-smart-action {
+                color: $custom-blue;
+            }
+        }
+
+        tbody {
+            a {
+                color: $custom-blue;
+            }
+            tr:nth-child(even) {
+                background-color: $background-color;
+            }
+            .ng2-smart-row {
+                border-bottom: 1px solid $table-split-color;
+                &.selected {
+                    background-color: $table-split-color;
+                }
+            }
+        }
+    }
+
+    ng2-smart-table-pager {
+        min-height: 65px;
+        .ng2-smart-pagination {
+            padding: 1rem;
+            margin-bottom: 0;
+            .page-link {
+                height: 100%;
+            }
+            .page-item.active .page-link {
+                background-color: $custom-blue;
+                border-color: $custom-blue;
+            }
+        }
+    }
+}

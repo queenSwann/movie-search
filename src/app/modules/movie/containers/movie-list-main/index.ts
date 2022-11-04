@@ -1,0 +1,1 @@
+export * from './movie-list-main.component'
