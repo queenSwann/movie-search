@@ -5,12 +5,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MoviesService {
-
+  private apikey = 'b40b1e58';
   constructor(public httpClient: HttpClient) { }
 
   public async loadMovies(title: string, page: number){    
-    const apikey = 'b40b1e58';
-    const url = `http://www.omdbapi.com/?s=${title}&page=${page}&type=movie&apikey=${apikey}`
+    const url = `http://www.omdbapi.com/?s=${title}&page=${page}&type=movie&apikey=${this.apikey}`
     const res = await fetch(`${url}`);
     const data = await res.json();
 
@@ -22,15 +21,9 @@ export class MoviesService {
   }
 
   public async getMovieById(id: string){    
-    const apikey = 'b40b1e58';
-    const url = `http://www.omdbapi.com/?i=${id}&apikey=${apikey}`
+    const url = `http://www.omdbapi.com/?i=${id}&apikey=${this.apikey}`
     const res = await fetch(`${url}`);
     const data = await res.json();
-
-    if(data.Response == "True") {
-      return data;
-    }else{
-      return null;
-    }
+    return data;
   }
 }
