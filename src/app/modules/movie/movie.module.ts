@@ -6,8 +6,6 @@ import { MovieListComponent } from './component/movie-list/movie-list.component'
 import { RouterModule } from '@angular/router';
 import { routes } from './movie.routes';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 
 @NgModule({
@@ -20,9 +18,6 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
     CommonModule, 
     RouterModule.forChild(routes), 
     SharedModule, 
-    FormsModule, 
-    ReactiveFormsModule,
-    Ng2SmartTableModule
   ]
 })
 export class MovieModule { }

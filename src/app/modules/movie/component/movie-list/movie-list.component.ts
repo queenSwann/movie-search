@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../services/movies.service';
-import { LocalDataSource } from 'ng2-smart-table';
 import { IMovie } from '../../interfaces/movie.interface';
 import { Router } from '@angular/router';
-import { ROUTES } from 'src/app/shared/constants/routes';
 
 @Component({
   selector: 'app-movie-list',
@@ -65,8 +63,7 @@ export class MovieListComponent implements OnInit {
   public async viewMovie(movie: IMovie, pos: number) {
     if(this.hidden[pos]){
       this.allHidden();
-      this.hidden[pos] = false;
-      
+      this.hidden[pos] = false;      
     }else{
       this.hidden[pos] = true;
     }
